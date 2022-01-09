@@ -1,0 +1,14 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.horizontal-line {
+  width: 20%;
+  height: 0.2rem;
+  background-color: $primary-color;
+  margin: 2.4rem 0;
+}
+
+.link-default {
+  color: $text-color;
+  text-decoration: noen;
+}

@@ -1,0 +1,36 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.btn {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &--primary {
+  }
+
+  &--scroll-right {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    position: absolute;
+    bottom: 2.4rem;
+    border-radius: 0.8rem;
+    color: $text-color;
+    border: 0.1rem solid $text-color;
+    padding: 0.4rem 1.6rem;
+    @include centerElement;
+
+    span {
+      margin-right: 0.8rem;
+    }
+  }
+
+  &--circle {
+    color: $text-color;
+    font-size: 2rem;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

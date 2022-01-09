@@ -1,0 +1,76 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.header {
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  z-index: 1001;
+  color: $text-color;
+  @include centerElement;
+
+  .nav-icon {
+    font-size: 3rem;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &.active {
+      color: $primary-color;
+      transform: rotate(90deg);
+      transition: transform 0.2s ease-out;
+    }
+
+    &.active + ul {
+      display: flex;
+      flex-direction: column;
+      transition: opacity 0.2s ease-out 0.2s;
+      opacity: 1;
+    }
+  }
+
+  ul {
+    margin-top: 0.8rem;
+    position: absolute;
+    opacity: 0;
+    list-style: none;
+    transition: opacity 0.2s ease-out 0.2s;
+
+    li {
+      font-size: 1.4rem;
+      width: 10rem;
+      height: 4rem;
+      cursor: pointer;
+      font-weight: bold;
+      @include centerElement;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .bulb {
+    color: $background-color;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.8rem;
+    background-color: $text-color;
+    border-radius: 50%;
+    display: flex;
+    margin-top: 0;
+    padding-top: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

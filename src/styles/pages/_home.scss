@@ -1,0 +1,18 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.home {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  .section {
+    min-width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-color: $background-color;
+    color: $text-color;
+    scroll-snap-align: start;
+  }
+}

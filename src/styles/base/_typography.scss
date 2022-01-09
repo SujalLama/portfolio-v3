@@ -1,0 +1,35 @@
+@import "../abstracts/variables";
+
+.heading {
+  &--primary {
+    color: $primary-color;
+    font-size: 8rem;
+  }
+
+  &--project {
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 24px 0;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      font-size: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &.active {
+      color: #fff;
+      font-size: 30px;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.paragraph {
+  &--body {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+}
