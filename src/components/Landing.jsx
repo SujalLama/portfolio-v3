@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import { HiChevronDoubleDown } from "react-icons/hi";
 import { scrollToSection } from '../utils/scrollToSection';
 
 
@@ -28,9 +29,13 @@ const Landing = () => {
             <span>Sass</span>
             </div>
         
-            <button className="btn btn--scroll-right" onClick={() => scrollToSection('project')}>
+            <button className="btn btn--scroll-right scroll-right" onClick={() => scrollToSection('project')}>
                 <span>scroll right</span>
                 <AiOutlineDoubleRight />{" "}
+            </button>
+            <button className="btn btn--scroll-right scroll-down" onClick={() => scrollToSection('project')}>
+                <span>scroll down</span>
+                <HiChevronDoubleDown />{" "}
             </button>
     </div>
     )

@@ -8,6 +8,10 @@
   flex-direction: column;
   text-align: center;
 
+  @include respond(tp) {
+    height: 100vh;
+  }
+
   .technology-used {
     width: 20%;
     display: flex;
@@ -16,5 +20,17 @@
     flex-wrap: wrap;
     font-size: 2rem;
     margin: 1rem 0;
+  }
+
+  .scroll-down {
+    display: none;
+    @include respond(tp) {
+      display: block;
+    }
+  }
+  .scroll-right {
+    @include respond(tp) {
+      display: none;
+    }
   }
 }

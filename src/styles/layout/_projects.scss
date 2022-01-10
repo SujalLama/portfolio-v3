@@ -7,12 +7,30 @@
   @include centerElement;
   position: relative;
 
+  @include respond(tp) {
+    height: 100vh;
+  }
+
+  @include respond(p) {
+    flex-direction: column;
+  }
+
   .project-head {
     width: 20%;
     height: 100%;
     display: flex;
     @include centerElement;
     flex-direction: column;
+
+    @include respond(p) {
+      flex-direction: row;
+      height: 10%;
+      width: 100%;
+
+      h3:first-child {
+        margin-right: 6rem;
+      }
+    }
   }
 
   .projects {
@@ -22,6 +40,10 @@
     align-items: center;
     justify-content: center;
     overflow-y: scroll;
+    @include respond(p) {
+      flex-direction: row;
+      width: 100%;
+    }
   }
 }
 

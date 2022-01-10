@@ -7,6 +7,15 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 
+  @include respond(tp) {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .section {
     min-width: 100vw;
     height: 100vh;
@@ -14,5 +23,9 @@
     background-color: $background-color;
     color: $text-color;
     scroll-snap-align: start;
+
+    @include respond(tp) {
+      scroll-snap-align: center;
+    }
   }
 }

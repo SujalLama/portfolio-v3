@@ -37,6 +37,11 @@
     overflow: auto;
     box-shadow: 0.1rem 0.1rem 1rem $black;
 
+    &.light {
+      background-color: #3778c2;
+      box-shadow: 0.1rem 0.1rem 1rem rgba(44, 43, 43, 0.9);
+    }
+
     @include respond(tl) {
       width: 80%;
     }
@@ -69,6 +74,10 @@
           font-weight: bold;
           width: 20%;
           margin-right: 2rem;
+
+          @include respond(mp) {
+            margin-right: 8rem;
+          }
         }
 
         .detail {
@@ -77,11 +86,5 @@
         }
       }
     }
-  }
-
-  .modal,
-  .light {
-    background-color: #3778c2;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(44, 43, 43, 0.9);
   }
 }

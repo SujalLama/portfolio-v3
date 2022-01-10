@@ -22,8 +22,12 @@ html {
     font-size: 50%;
   }
 
-  @include respond(mp) {
+  @include respond(tp) {
     font-size: 40%;
+  }
+
+  @include respond(mp) {
+    font-size: 30%;
   }
 }
 

@@ -8,7 +8,7 @@ const Modal = ({detail, closeModal, darkMode}) => {
                 <div className="project-title">{detail.name}</div>
                 <button className='btn btn--circle' onClick={closeModal}><AiFillCloseCircle /></button>
             </div>
-            <div className={`modal ${darkMode || "active"}`}>
+            <div className={`modal ${darkMode || "light"}`}>
                 <div className="slide-show">
                     <img src={detail.image} alt={detail.name} />
                 </div>
