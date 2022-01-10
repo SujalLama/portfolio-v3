@@ -70,7 +70,14 @@
     cursor: pointer;
 
     &:hover {
-      color: $yellow;
+      color: #3778c2;
+    }
+    &.light {
+      color: #3778c2;
+    }
+
+    &.light:hover {
+      color: $background-color;
     }
   }
 }

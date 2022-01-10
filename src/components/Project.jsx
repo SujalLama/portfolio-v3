@@ -6,7 +6,7 @@ import Modal from './Modal';
 
 const webProjects = [
   {
-    id: 1,
+    id: 1324,
     name: "PlanetFarm",
     image: "./images/planet.jpg",
     about: "Planet Farms is a system built in PERN Stack. This stack consists of PostgreSQL, Express, React and Node.js",
@@ -16,7 +16,7 @@ const webProjects = [
     website: "",
   },
   {
-    id: 2,
+    id: 25564,
     name: "Bishwo Bhasa",
     image: "./images/bishwo-bhasa.jpg",
     about: "This app is designed for bishwobhawsa consultancy. This app allows the students to enroll in EPS test and also allows the admin to create tests.",
@@ -26,7 +26,7 @@ const webProjects = [
     website: "",
   },
   {
-    id: 3,
+    id: 3345,
     name: "Digital Classroom",
     image: "./images/classroom.JPG",
     about: "This app is the representation of the online learning platform. User can sign in and enroll in the classroom. They can also be teacher and add their own course material.",
@@ -36,7 +36,7 @@ const webProjects = [
     website: "https://digital-class.netlify.app/",
   },
   {
-    id: 4,
+    id: 46454,
     name: "Digital Marketplace",
     image: "./images/market.JPG",
     about: "This app is the representation of the online markeplace where you can enlist your products and sell them. It also has bidding system where you can create a bid for a particular service or product.",
@@ -46,7 +46,7 @@ const webProjects = [
     website: "https://digital-market.netlify.app/",
   },
   {
-    id: 5,
+    id: 53423,
     name: "Expense Tracker",
     image: "./images/expense.JPG",
     about: "With this application, you can store your monthly expenses. You can look at various graphical tools to analyse your expense habit.",
@@ -56,7 +56,7 @@ const webProjects = [
     website: "https://track-expense-101.netlify.app/",
   },
   {
-    id: 6,
+    id: 686765,
     name: "Social Media",
     image: "./images/mern.JPG",
     about: "As the name suggests, this is the representation of social media platform. User can create post, like and comment. They can also follow people.",
@@ -69,7 +69,7 @@ const webProjects = [
 
 const mobProjects = [
   {
-    id: 8,
+    id: 808778,
     name: "Fohor Malai Client",
     image: "./images/fohor-malai.jpg",
     github: "",
@@ -79,7 +79,7 @@ const mobProjects = [
     features: ['Phone authentication', 'notification', 'notice', "donation", "campaign participation", "location tracking"],
   },
   {
-    id: 9,
+    id: 91232,
     name: "Fohor Malai Driver",
     image: "./images/fohor-malai.jpg",
     github: "",
@@ -89,7 +89,7 @@ const mobProjects = [
     features: ['Phone authentication', 'notification', 'notice', "donation", "campaign participation", "location tracking", "scheduling"],
   },
   {
-    id: 10,
+    id: 109767,
     name: "Fohor Malai Admin",
     image: "./images/fohor-malai-admin.jpg",
     github: "",
@@ -100,7 +100,7 @@ const mobProjects = [
   },
 ]
 
-const Project = () => {
+const Project = ({darkMode}) => {
   const [openModal, setOpenModal] = useState(false);
   const [openMobile, setOpenMobile] = useState(false);
   const [detail, setDetail] = useState({});
@@ -117,7 +117,7 @@ const Project = () => {
   }
     return (
          <div className="project" id="project">
-           {openModal && <Modal detail={detail} closeModal={() => setOpenModal(false)} />}
+           {openModal && <Modal detail={detail} closeModal={() => setOpenModal(false)} darkMode={darkMode} />}
       <div className="project-head">
         <h3 className={`heading--project ${openMobile || 'active'}`} onClick={() => setOpenMobile(false)}>Web Apps</h3>
         <h3 className={`heading--project ${openMobile && 'active'}`} onClick={() => setOpenMobile(true)}>Mobile Apps</h3>
@@ -126,7 +126,7 @@ const Project = () => {
         <div className="cards">
             {openMobile || webProjects.map((item) => {
               return (
-                <div className="card" key={item.id}>
+                <div className={`card ${darkMode || "light"}`} key={item.id}>
                 <div className="img-wrapper">
                   <img src={item.image} alt={item.name} />
                 </div>
@@ -147,7 +147,7 @@ const Project = () => {
             })}
             {openMobile && mobProjects.map((item) => {
               return (
-                <div className="card" key={item.id}>
+                <div className={`card ${darkMode || "light"}`} key={item.id}>
                 <div className="img-wrapper">
                   <img src={item.image} alt={item.name} />
                 </div>

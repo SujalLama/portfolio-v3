@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import About from '../components/About'
 import Header from '../components/Header'
 import Landing from '../components/Landing'
@@ -6,6 +6,7 @@ import Project from '../components/Project'
 import Particles from "react-tsparticles";
 
 const Home = () => {
+  const [darkMode, setDarkMode] = useState(true);
     const particlesInit = (main) => {
     console.log(main);
   };
@@ -22,7 +23,7 @@ const Home = () => {
         options={{
           background: {
             color: {
-              value: "#000"
+              value: `${darkMode ? "#151515;" : "#3778c2"}`
             }
           },
           fpsLimit: 60,
@@ -92,12 +93,12 @@ const Home = () => {
           detectRetina: true
         }}
       />
-            <Header />
+            <Header setDarkMode={setDarkMode} darkMode={darkMode}/>
             <div className="section">
                 <Landing />
             </div>
             <div className="section">
-                <Project />
+                <Project darkMode={darkMode} />
             </div>
             <div className="section">
                 <About />

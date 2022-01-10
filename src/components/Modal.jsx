@@ -1,14 +1,14 @@
 import React from 'react'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
-const Modal = ({detail, closeModal}) => {
+const Modal = ({detail, closeModal, darkMode}) => {
     return (
         <div className='modal-wrapper'>
             <div className="modal-header">
                 <div className="project-title">{detail.name}</div>
                 <button className='btn btn--circle' onClick={closeModal}><AiFillCloseCircle /></button>
             </div>
-            <div className="modal">
+            <div className={`modal ${darkMode || "active"}`}>
                 <div className="slide-show">
                     <img src={detail.image} alt={detail.name} />
                 </div>

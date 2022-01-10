@@ -1,8 +1,8 @@
 import { MdAssistantNavigation } from "react-icons/md";
-// import { AiTwotoneBulb } from "react-icons/ai";
+import { AiTwotoneBulb } from "react-icons/ai";
 import { useState } from "react";
 
-function Header() {
+function Header({setDarkMode, darkMode}) {
   const [nav, setNav] = useState(false);
   const scrollToSection = (section) => {
     document.getElementById(section).scrollIntoView({
@@ -27,9 +27,9 @@ function Header() {
           <li onClick={() => scrollToSection("about")}>About</li>
         </ul>
       </div>
-      {/* <div className="bulb">
+      <div className={`bulb ${darkMode || 'light'}`} onClick={() => setDarkMode(!darkMode)}>
         <AiTwotoneBulb />
-      </div> */}
+      </div>
     </div>
   );
 }
