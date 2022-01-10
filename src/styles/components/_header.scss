@@ -15,6 +15,9 @@
     cursor: pointer;
     transition: transform 0.2s ease-out;
 
+    @include respond(mp) {
+      font-size: 6rem;
+    }
     &:hover {
       color: $primary-color;
     }
@@ -47,6 +50,10 @@
       cursor: pointer;
       font-weight: bold;
       @include centerElement;
+      @include respond(mp) {
+        font-size: 3rem;
+        height: 8rem;
+      }
 
       &:hover {
         color: $primary-color;
@@ -68,6 +75,12 @@
     justify-content: center;
     margin-left: 1.2rem;
     cursor: pointer;
+
+    @include respond(mp) {
+      width: 5.5rem;
+      height: 5.5rem;
+      font-size: 3rem;
+    }
 
     &:hover {
       color: #3778c2;

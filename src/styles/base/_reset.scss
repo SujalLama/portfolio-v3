@@ -26,9 +26,9 @@ html {
     font-size: 40%;
   }
 
-  @include respond(mp) {
-    font-size: 30%;
-  }
+  // @include respond(mp) {
+  //   font-size: 30%;
+  // }
 }
 
 body {

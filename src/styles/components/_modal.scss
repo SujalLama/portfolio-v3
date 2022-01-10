@@ -46,6 +46,10 @@
       width: 80%;
     }
 
+    @include respond(mp) {
+      width: 95%;
+    }
+
     .slide-show {
       width: 100%;
       height: 30rem;

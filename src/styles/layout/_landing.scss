@@ -20,6 +20,10 @@
     flex-wrap: wrap;
     font-size: 2rem;
     margin: 1rem 0;
+
+    @include respond(mp) {
+      width: 40%;
+    }
   }
 
   .scroll-down {
